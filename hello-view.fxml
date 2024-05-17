@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #BFDDE5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentpercentagecalculator.controller">
+   <children>
+      <Label alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="18.0" prefWidth="600.0" style="-fx-background-color: #6492BA;" text=" Student Percentage calculator">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="348.0" layoutY="60.0" prefHeight="46.0" prefWidth="210.0" style="-fx-background-color: #F5EFF9;" text="Percentage Calculator">
+         <font>
+            <Font name="Dubai Medium" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="152.0" text="FirstName;" />
+      <Label layoutX="325.0" layoutY="191.0" text="LastName:" />
+      <Label layoutX="338.0" layoutY="238.0" text="Obtained Marks:" />
+      <Label layoutX="362.0" layoutY="274.0" text="Total Marks:" />
+      <TextField fx:id="firstname" layoutX="394.0" layoutY="148.0" prefHeight="26.0" prefWidth="169.0" promptText="Student's First Name" />
+      <TextField fx:id="lastname" layoutX="394.0" layoutY="187.0" prefHeight="26.0" prefWidth="170.0" promptText="Student's Last Name" />
+      <TextField fx:id="obtmarks" alignment="CENTER" layoutX="441.0" layoutY="233.0" prefHeight="26.0" prefWidth="88.0" />
+      <TextField fx:id="totalmarks" alignment="CENTER" layoutX="441.0" layoutY="270.0" prefHeight="26.0" prefWidth="88.0" />
+      <Button fx:id="addstudent" layoutX="412.0" layoutY="327.0" mnemonicParsing="false" onAction="#UserInput" style="-fx-background-color: #BFDDF6;" text="Add Student" />
+      <AnchorPane layoutY="39.0" prefHeight="362.0" prefWidth="322.0" style="-fx-background-color: #CCEBEA;">
+         <children>
+            <TableView fx:id="tableview" layoutX="5.0" layoutY="24.0" prefHeight="226.0" prefWidth="314.0">
+              <columns>
+                <TableColumn fx:id="FullName" prefWidth="101.5999755859375" text="Full Name" />
+                  <TableColumn fx:id="ObtainedMarks" prefWidth="71.99993896484375" text="Obtained M" />
+                  <TableColumn fx:id="TotalMarks" minWidth="2.4000244140625" prefWidth="72.800048828125" text="Total M" />
+                  <TableColumn fx:id="Percentage" prefWidth="65.5999755859375" text="Total %" />
+              </columns>
+            </TableView>
+            <Label layoutX="5.0" layoutY="5.0" prefHeight="18.0" prefWidth="314.0" style="-fx-background-color: #BFDDE5;" text="Percentage Table" />
+            <Button fx:id="removestudent" layoutX="109.0" layoutY="281.0" mnemonicParsing="false" onAction="#removestudent" style="-fx-background-color: #BFDDF6;" text="Remove Student" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="throwException" alignment="CENTER" layoutX="401.0" layoutY="116.0" prefHeight="20.0" prefWidth="104.0" textFill="#d41111">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
